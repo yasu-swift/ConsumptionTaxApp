@@ -16,6 +16,8 @@
 		D9E32B4F273A94D300350753 /* ConsumptionTaxAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E32B4E273A94D300350753 /* ConsumptionTaxAppTests.swift */; };
 		D9E32B59273A94D300350753 /* ConsumptionTaxAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E32B58273A94D300350753 /* ConsumptionTaxAppUITests.swift */; };
 		D9E32B5B273A94D300350753 /* ConsumptionTaxAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E32B5A273A94D300350753 /* ConsumptionTaxAppUITestsLaunchTests.swift */; };
+		D9E32B68273BDA2700350753 /* TotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E32B67273BDA2700350753 /* TotalViewController.swift */; };
+		D9E32B6C273BEFF500350753 /* Calculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E32B6B273BEFF500350753 /* Calculation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D9E32B54273A94D300350753 /* ConsumptionTaxAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConsumptionTaxAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E32B58273A94D300350753 /* ConsumptionTaxAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionTaxAppUITests.swift; sourceTree = "<group>"; };
 		D9E32B5A273A94D300350753 /* ConsumptionTaxAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionTaxAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D9E32B67273BDA2700350753 /* TotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalViewController.swift; sourceTree = "<group>"; };
+		D9E32B6B273BEFF500350753 /* Calculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,10 +106,12 @@
 				D9E32B37273A94D200350753 /* AppDelegate.swift */,
 				D9E32B39273A94D200350753 /* SceneDelegate.swift */,
 				D9E32B3B273A94D200350753 /* ViewController.swift */,
+				D9E32B67273BDA2700350753 /* TotalViewController.swift */,
 				D9E32B3D273A94D200350753 /* Main.storyboard */,
 				D9E32B40273A94D300350753 /* Assets.xcassets */,
 				D9E32B42273A94D300350753 /* LaunchScreen.storyboard */,
 				D9E32B45273A94D300350753 /* Info.plist */,
+				D9E32B6B273BEFF500350753 /* Calculation.swift */,
 			);
 			path = ConsumptionTaxApp;
 			sourceTree = "<group>";
@@ -261,6 +267,8 @@
 				D9E32B3C273A94D200350753 /* ViewController.swift in Sources */,
 				D9E32B38273A94D200350753 /* AppDelegate.swift in Sources */,
 				D9E32B3A273A94D200350753 /* SceneDelegate.swift in Sources */,
+				D9E32B68273BDA2700350753 /* TotalViewController.swift in Sources */,
+				D9E32B6C273BEFF500350753 /* Calculation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
