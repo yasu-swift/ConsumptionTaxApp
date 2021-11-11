@@ -75,10 +75,10 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-A9-PcR">
-                                <rect key="frame" x="220" y="165" width="131" height="32"/>
+                                <rect key="frame" x="258" y="165" width="93" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="10%"/>
+                                    <segment title="8%"/>
                                 </segments>
                                 <connections>
                                     <action selector="consSelectButton:" destination="BYZ-38-t0r" eventType="valueChanged" id="0SQ-w0-A87"/>
