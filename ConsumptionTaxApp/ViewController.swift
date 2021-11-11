@@ -24,21 +24,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         addTableView.delegate = self
         addTableView.dataSource = self
-        numArray.removeAll()
+        userDefaults.removeObject(forKey: "add")
+        totalNum = 0
+        numArray = []
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        numTextFierld.text = ""
+        viewDidLoad()
+    }
+    // 消費税の切り替えボタン
     @IBAction func consSelectButton(_ sender: Any) {
-        if consSelect.selectedSegmentIndex == 0 {
-            cal(num: 1.1)
+        if numTextFierld.text != "" {
+            if consSelect.selectedSegmentIndex == 0 {
+                cal(num: 1.1)
+            } else {
+                cal(num: 1.08)
+            }
         } else {
-            cal(num: 1.08)
+            return
         }
+        
     }
-    
+    // 追加ボタン
     @IBAction func addButton(_ sender: Any) {
         
         if numTextFierld.text != "" {
-            
             if consSelect.selectedSegmentIndex == 0 {
                 calculation(num: 1.1)
             } else {
@@ -49,20 +59,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         self.addTableView.reloadData()
     }
-    
+    // 消費税の切り替えボタンの関数
     func cal(num:Double) {
         let consNum = Double(numTextFierld.text!)!
         let ansNum = consNum * Double(num)
         totalLabel.text = String(format: "%.0f", ansNum)
     }
-    
+    // 消費税を計算するための関数
     func calculation(num:Double) {
         let consNum = Double(numTextFierld.text!)!
         let ansNum = consNum * Double(num)
         numArray.append(ansNum)
-        let userDefaults = UserDefaults.standard
         userDefaults.set(numArray, forKey: "add")
         numTextFierld.text = ""
+        totalLabel.text = "0"
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -14,15 +14,19 @@ class TotalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        numArray = UserDefaults.standard.object(forKey: "add") as! [Double]
-        print(numArray)
-        totalNum = numArray.reduce(0) { (num1:Double, num2:Double) -> Double in
-            return num1 + num2
+        if UserDefaults.standard.object(forKey: "add") != nil {
+            numArray = UserDefaults.standard.object(forKey: "add") as! [Double]
+            print(numArray)
+            totalNum = numArray.reduce(0) { (num1:Double, num2:Double) -> Double in
+                return num1 + num2
+            }
+            totalLabel.text = String(format: "%.0f", totalNum)
+        } else {
+            totalLabel.text = "0"
         }
-        totalLabel.text = String(format: "%.0f", totalNum)
+        
     }
-    
+    // 戻るボタン
     @IBAction func backButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
